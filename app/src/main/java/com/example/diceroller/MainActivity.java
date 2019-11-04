@@ -32,8 +32,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView scoreView;
     TextView questionView;
     TextView userRoll;
-    TextView RolledGuess;
-    TextView Question;
 
     int score = 0;
 
@@ -47,10 +45,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         userGuess = findViewById(R.id.userGuess);
 
         button_Submit.setOnClickListener(this);
-
         //textView3= findViewById(R.id.textView3);
-        RolledNumber = findViewById(R.id.RolledNumber);
 
+        RolledNumber = findViewById(R.id.RolledNumber);
         scoreView = findViewById(R.id.scoreView);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -91,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TextView userRoll = this.findViewById(R.id.RolledNumber);
 
         Random r = new Random();
-        int number = r.nextInt(7);
+        int number = r.nextInt(6) + 1;
 
         userRoll.setText(Integer.toString(number));
     }
@@ -104,7 +101,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             String guess = str_number_Input;
             userGuess.setText(guess);
         }
-
     }
 
     public void guessClicked(View view) {
