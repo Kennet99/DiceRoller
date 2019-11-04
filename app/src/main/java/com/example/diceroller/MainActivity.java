@@ -75,21 +75,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
     public void on_button_click(View view) {
         TextView userRoll = this.findViewById(R.id.RolledNumber);
-
         Random r = new Random();
         int number = r.nextInt(6) + 1;
-
         userRoll.setText(Integer.toString(number));
     }
 
@@ -112,7 +108,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         try {
             int numGuess = Integer.parseInt(userGuess.getText().toString());
             int DiceRoll = Integer.parseInt((userRoll.getText().toString()));
-
             if (numGuess == DiceRoll) {
                 score++;
                 resultView.setText("Congratulations!");
