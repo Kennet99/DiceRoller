@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         userGuess = findViewById(R.id.userGuess);
 
         button_Submit.setOnClickListener(this);
-        //textView3= findViewById(R.id.textView3);
 
         RolledNumber = findViewById(R.id.RolledNumber);
         scoreView = findViewById(R.id.scoreView);
@@ -82,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return super.onOptionsItemSelected(item);
     }
 
-    public void on_button_click(View view) {
+    public void roll_the_dice(View view) {
         TextView userRoll = this.findViewById(R.id.RolledNumber);
         Random r = new Random();
         int number = r.nextInt(6) + 1;
