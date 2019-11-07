@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import java.util.*;
-import java.util.ArrayList;
 import java.util.Arrays;
 import android.util.Log;
 import android.view.View;
